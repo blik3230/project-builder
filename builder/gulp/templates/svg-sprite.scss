@@ -1,0 +1,23 @@
+.svg-icon {
+	display: inline-block;
+	vertical-align: middle;
+
+	<% _.forEach( icons, function( icon ){ %><%= '&.svg-icon_' + icon.className.replace('.', '') %> {
+		width: <%= icon.width %>;
+		height: <%= icon.height %>;
+		<%= icon.style %>
+	}
+
+	<% }); %>
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,78 @@
+//-
+   Main layout for most pages
+include ../../common/svg-use
+
+doctype html
+html(lang='ru')
+   head
+      meta(charset='UTF-8')
+      meta(name='viewport', content='width=device-width, initial-scale=1.0')
+      block title
+         title Default title
+      link(rel='stylesheet', href='css/style.css')
+      link(rel='stylesheet', href='css/vendors.css')
+      link(rel='stylesheet', href='css/helpers.css')
+   body
+      script.
+         ;( function (window, document) {
+            'use strict';
+            var file = 'images/sprites/svg-symbols.svg',
+                    revision = 1;
+            if (!document.createElementNS || !document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect)
+               return true;
+            var isLocalStorage = 'localStorage' in window && window['localStorage'] !== null,
+                    request,
+                    data,
+                    insertIT = function () {
+                       document.body.insertAdjacentHTML('afterbegin', data);
+                    },
+                    insert = function () {
+                       if (document.body) insertIT();
+                       else document.addEventListener('DOMContentLoaded', insertIT);
+                    };
+
+            try {
+               request = new XMLHttpRequest();
+               request.open('GET', file, true);
+               request.onload = function () {
+                  if (request.status >= 200 && request.status < 400) {
+                     data = request.responseText;
+
+                     if (isLocalStorage && localStorage.getItem('inlineSVGrev') == localStorage.getItem('inlineSVGdata')) {
+                        data = localStorage.getItem('inlineSVGdata');
+                        if (data) {
+                           insert();
+                           return true;
+                        }
+                     }
+
+                     insert();
+                     if (isLocalStorage) {
+                        localStorage.setItem('inlineSVGdata', data);
+                        localStorage.setItem('inlineSVGrev', revision);
+                     }
+                  }
+               }
+               request.send();
+            }
+            catch (e) {
+            }
+         }(window, document) );
+
+      .layout-main
+         include ./header/header
+
+         block content
+            p Default content s
+
+         include ./footer/footer
+
+      //-common modals
+      //include ../../components/main/modal/login/modal_login
+
+      //- modals for individual pages
+      block modals
+
+      // scripts for page
+      block scripts
+         script(src='../js/app.js')

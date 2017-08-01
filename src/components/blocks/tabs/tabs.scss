@@ -1,0 +1,15 @@
+.tabs {
+
+	.tabs__nav {}
+	.tabs__nav-item {}
+	.tabs__nav-item_active {}
+
+	.tabs__item {
+		display: none;
+
+		// modifiers
+		&_active {
+			display: block;
+		}
+	}
+}

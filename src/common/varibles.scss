@@ -1,0 +1,91 @@
+//font path
+$font-path: "../fonts" !default;
+
+// font weights
+$g-fw-thin: 100;
+$g-fw-exlight: 200;
+$g-fw-light: 300;
+$g-fw-normal: 400;
+$g-fw-medium: 500;
+$g-fw-semibold: 600;
+$g-fw-bold: 700;
+$g-fw-exbold: 800;
+
+
+// values of fonts
+// is in ./fonts.scss
+$g-font-main: "Open Sans", Helvetica, Arial, sans-serif;
+$g-font-second: 'Noto Sans', Helvetica, Arial, sans-serif;
+
+
+//
+//----- colors -----
+//
+$color-white: #fff;
+
+$color-black: #292929;
+
+$color-gray: #6c6e80;
+$color-lightgrey: #9a9a9a;
+
+$color-blue: #2f8fea;
+$color-darkblue: #3a445b;
+$color-lightblue: #deebfb;
+$color-lightblue-2: #f3f9fc;
+
+$color-green: #6ac986;
+
+$color-red: #f74c4c;
+
+
+//
+//----- main layout values -----
+//
+	// values of the zindex
+	$g-zindex: (
+		l-main: 0,
+		header: 2,
+		nav: 3,
+		main: 1,
+		footer: 2,
+	);
+
+	// values of the header
+	$g-header: (
+		height-sm: 0px,
+		height-xs: 0px,
+		zi: #{map_get($g-zindex, header)}
+	);
+
+	// values of the footer
+	$g-footer: (
+		height-sm: 0px,
+		height-xs: 0px,
+		zi: #{map_get($g-zindex, footer)}
+	);
+
+
+// screen resolutions
+// variables are in ./utils/mixins/media.scss
+// default - > 1200px
+// 768px < sm < 1119px
+// xs < 767px
+
+$media-max-sm: 1200px;
+$media-min-sm: 788px;  // + 20px на скролл в хроме
+
+$media-max-xs: 787px;
+$media-min-xs: 320px;
+
+// values of the container
+$g-container: (
+	width: 1200px,
+	width-sm: 768px,
+	width-xs: 100%,
+);
+
+
+//
+//----- shadows -----
+//
+$g-text-shadow: 0 -2px 1px rgba(0, 0, 0, 0.25);

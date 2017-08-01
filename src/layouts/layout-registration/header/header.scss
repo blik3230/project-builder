@@ -1,0 +1,24 @@
+.header {
+	background-color: $color-black;
+	margin-bottom: 40px;
+
+	.header__layout {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.header__logo {
+		display: inline-block;
+		text-decoration: none;
+
+		.svg-icon_logo-romsat {
+			width: 68px;
+			height: 40px;
+		}
+	}
+
+	.header__langs {
+		// more styles in ./langs.scss
+	}
+}

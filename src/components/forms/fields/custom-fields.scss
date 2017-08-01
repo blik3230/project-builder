@@ -1,0 +1,29 @@
+%style-of-form-element {
+	width: 100%;
+	padding: 1px 6px;
+
+	background-color: #fff;
+	border: 2px solid $color-lightblue;
+	border-radius: 4px;
+
+	&:focus {
+		border-color: darken($color-lightblue, 15);
+	}
+}
+
+
+.input {
+	@extend %style-of-form-element;
+
+	height: 40px;
+	color: $color-black;
+	font: 12px $g-font-second;
+
+	@include placeholder {
+		color: #a5a4a4;
+	}
+}
+
+.textarea {
+	@extend %style-of-form-element;
+}

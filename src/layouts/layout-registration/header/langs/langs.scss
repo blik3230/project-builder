@@ -1,0 +1,76 @@
+.langs {
+	position: relative;
+	user-select: none;
+
+	.langs__toggle {
+		position: relative;
+		display: flex;
+		width: 100px;
+		height: 60px;
+		padding-left: 30px;
+		cursor: pointer;
+
+		.lang {
+			margin: auto 0;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			left: 10px;
+			top: 50%;
+			margin-top: -1px;
+
+			@include bg($lang-arrow);
+
+			transition: transform 0.3s;
+		}
+	}
+
+	.langs__list {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		display: none;
+	}
+
+	.langs__item {
+		display: flex;
+		height: 60px;
+		padding-left: 30px;
+		cursor: pointer;
+
+		background: $color-black;
+		border-top: 1px solid #585B61;
+
+		text-decoration: none;
+
+		&:hover {
+			opacity: 0.9;
+		}
+
+		.lang {
+			margin: auto 0;
+		}
+	}
+
+	.lang {
+		// more in ./lang.scss
+	}
+
+	// modifier
+	&.langs_open {
+
+		.langs__toggle {
+
+			&:after {
+				transform: rotateZ(180deg);
+			}
+		}
+
+		.langs__list {
+			display: block;
+		}
+	}
+}

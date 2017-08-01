@@ -1,0 +1,22 @@
+  $home5: -5px -5px 44px 36px 138px 88px '../images/sprites/sprite.svg' 'home5';
+  $home2: -5px -46px 42px 38px 138px 88px '../images/sprites/sprite.svg' 'home2';
+  $home1: -54px -5px 40px 33px 138px 88px '../images/sprites/sprite.svg' 'home1';
+  $home4: -54px -43px 39px 40px 138px 88px '../images/sprites/sprite.svg' 'home4';
+  $home6: -98px -5px 35px 31px 138px 88px '../images/sprites/sprite.svg' 'home6';
+  $home3: -98px -41px 33px 34px 138px 88px '../images/sprites/sprite.svg' 'home3';
+
+
+
+@mixin svg-sprite-position($svg-sprite) {
+  $svg-sprite-offset-x: nth($svg-sprite, 1);
+  $svg-sprite-offset-y: nth($svg-sprite, 2);
+  background-position: $svg-sprite-offset-x  $svg-sprite-offset-y;
+}
+
+@mixin bg-svg($svg-sprite, $repeat: no-repeat) {
+    background-image: url('../images/sprites/sprite.svg');
+    @include svg-sprite-position($svg-sprite);
+    width: nth($svg-sprite, 3);
+    height: nth($svg-sprite, 4);
+    background-repeat: $repeat;
+}

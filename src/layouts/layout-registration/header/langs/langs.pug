@@ -1,0 +1,15 @@
+//-
+	Created by ITUA on 13.06.2017.
+
+.langs(:class="{'langs_open': isOpen}")
+	.langs__toggle(@click.stop='toggle')
+		.lang
+			.lang__text укр
+			.lang__icon
+				i.icon.icon_flag-ua
+	.langs__list
+		a.langs__item(href='#')
+			.lang
+				.lang__text рус
+				.lang__icon
+					i.icon.icon_flag-rus

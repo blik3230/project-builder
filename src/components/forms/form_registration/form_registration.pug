@@ -1,0 +1,89 @@
+//-
+	Created by ITUA on 14.06.2017.
+
+form.form.form_registration(action='/local/ajax/register/')
+	.form__body
+		.form__item
+			.form__wrap-label
+				label.form__label П.І.Б*
+			.form__wrap-field
+				input.form__field.input(
+				type='text',
+				name='FORM[UF_NAME]',
+				class='js-validate',
+				required,
+				placeholder='Іванов Іван Іванович')
+
+		.form__item
+			.form__wrap-label
+				label.form__label Компанія*
+			.form__wrap-field
+				input.form__field.input(type='text',
+				name='FORM[UF_COMPANY_NAME]',
+				class='js-validate',
+				required,
+				placeholder='TJF LTD Company')
+
+		.form__item
+			.form__wrap-label
+				label.form__label Посада*
+			.form__wrap-field
+				input.form__field.input(type='text',
+				name='FORM[UF_POSITION]',
+				class='js-validate',
+				required,
+				placeholder='LTD Company')
+
+		.form__item
+			.form__wrap-label
+				label.form__label ЕГРОПОУ/ІНН*
+			.form__wrap-field
+				input.form__field.input(type='text',
+				name='FORM[UF_INN]',
+				class='js-validate',
+				data-type-of-validate='integer',
+				required,
+				placeholder='678544474664')
+
+		.form__item
+			.form__wrap-label
+				label.form__label Населений пункт*
+			.form__wrap-field
+				include ../fields/bx-location/bx-location
+
+		.form__item
+			.form__wrap-label
+				label.form__label Email*
+			.form__wrap-field
+				input.form__field.input(type='text',
+				name='FORM[UF_EMAIL]',
+				class='js-validate',
+				data-type-of-validate='email',
+				required,
+				placeholder='your-email@mail.com')
+
+		.form__item
+			.form__wrap-label
+				label.form__label Номер телефону*
+			.form__wrap-field
+				input.form__field.input(type='text',
+				name='FORM[UF_PERSONAL_PHONE]',
+				class='js-validate',
+				data-type-of-validate='phone',
+				required,
+				placeholder='0441234567')
+
+		.form__item
+			button.form__submit.btn.btn_block.btn_load(type='submit')
+				.btn__icon
+					+svg_registration-key
+				.btn__preloader
+				= ' Зареєструватись'
+
+	.form__footer
+		.form__info.
+			Натискаючи «Зареєструватись»<br>
+			я приймаю умови обробки<br>
+			і збереження персональних даних
+
+	include ../form__server-err/form__server-err

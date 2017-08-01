@@ -1,0 +1,32 @@
+section#modal-login.modal.modal_login.mfp-hide.mfp-with-anim
+	.modal__close.js-modal-close(href='javascript:;')
+		i.icon.icon_modal-close
+	h1.modal__title Вход в личный кабинет
+	.modal__form.form
+		form.js-form-validate
+			.form__row
+				.form__field
+					input(type="text", placeholder='Номер телефона', required).js-validate.js-mask
+					.form__icon
+						i.icon.icon_field-phone
+			.form__row
+				.form__field
+					input(type="password", placeholder='Пароль', required).js-validate
+					.form__icon
+						i.icon.icon_field-pass
+			.form__row.h-tac
+				a.form__forget.js-btn-modal(href='#modal-recovery') Забыли пороль
+
+			.form__row
+				button.form__submit.btn.btn_block.btn_blue.js-btn-validate Войти
+		.form__row.h-tac
+			a.form__link(href='#') Зарегистрироватся
+
+	.modal__footer
+		.modal__list-soc.list-soc
+			a.list-soc__item(href="#")
+				i.icon.icon_modal-soc-vk
+			a.list-soc__item(href="#")
+				i.icon.icon_modal-soc-fb
+			a.list-soc__item(href="#")
+				i.icon.icon_modal-soc-gp

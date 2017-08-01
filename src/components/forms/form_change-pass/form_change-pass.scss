@@ -1,0 +1,25 @@
+.form.form_change-pass {
+	width: 260px;
+	margin: 0 auto;
+
+	.form__head {
+		margin-bottom: 30px;
+		text-align: center;
+	}
+
+	.form__title {
+		margin-bottom: 20px;
+
+		color: $color-gray;
+		font: $g-fw-bold 14px $g-font-second;
+	}
+
+	.form__caption {
+		color: $color-gray;
+		font: 12px $g-font-second;
+	}
+
+	.form__message {
+		text-align: center;
+	}
+}

@@ -1,0 +1,20 @@
+//-
+	Created by ITUA on 21.06.2017.
+.bx-location(data-callback='')
+	input.bx-location__label.form__field(
+	readonly,
+	placeholder='Выберите город',
+	data-error-required='Вкажіть населений пункт'
+	class='js-validate',
+	required
+	)
+	input.bx-location__city-val(type='hidden', name='FORM[UF_LOCATION_ID]')
+	.bx-location__popup
+		.bx-location__wrap-field
+			input.bx-location__inp(type='text', placeholder='Введите название ...')
+		p.bx-location__info Список порожній. Введіть перші літери міста і виберіть його зі списку. (Список пуст. Введите первые буквы города и выберите его из списка.)
+		ul.bx-location__list
+			li.bx-location__item Киев
+
+
+

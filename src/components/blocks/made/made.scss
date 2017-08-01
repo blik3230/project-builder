@@ -1,0 +1,25 @@
+.made {
+	display: flex;
+	text-decoration: none;
+
+	.made__icon {
+		@include bg($logo-itua);
+		margin-right: 9px;
+	}
+
+	.made__text {
+		color: $color-white;
+		font: 13px $g-font-second;
+		opacity: 0.6;
+	}
+
+	&:hover {
+		.made__icon {
+			@include sprite-position($logo-itua-hover);
+		}
+
+		.made__text {
+			opacity: 1;
+		}
+	}
+}

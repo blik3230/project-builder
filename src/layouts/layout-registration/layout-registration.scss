@@ -1,0 +1,36 @@
+.layout-registration {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh; /* 1 */
+
+	background-color: #54be82;
+
+	// для IE каторый не потдерживает min-height у flex
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+		height: 100vh;
+		min-height: 0;
+	}
+
+	.layout-registration__header {
+		position: relative;
+		z-index: map_get($g-zindex, 'header');
+	}
+
+	.layout-registration__main {
+		position: relative;
+		flex: 1 0 auto; /* 2 */
+		z-index: map_get($g-zindex, 'main');
+	}
+
+	.layout-registration__header.header_fix + .main {
+
+	}
+
+	.layout-registration__footer {
+		position: relative;
+		flex-shrink: 0; /* 2 */
+		z-index: map_get($g-zindex, 'footer');
+	}
+
+}

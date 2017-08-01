@@ -1,0 +1,34 @@
+//-
+	The layout of the root index page
+doctype html
+html(lang='ru')
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		block title
+			title Project Name
+		style
+			include style-for-index.css
+
+	body
+		.iframe
+			iframe(src="" frameborder="0" id="iframe")
+
+		block content
+			ol.list-pages
+				li.list-pages__item
+					a.link(href="home.html") Главная
+				li.list-pages__item
+					a.link(href="home.html") Главная
+				li.list-pages__item
+					a.link(href="home.html") Главная
+			button(onclick="addPage()") Добавить новую страницу.
+
+
+		script
+			include script-for-index.js
+
+
+
+
+

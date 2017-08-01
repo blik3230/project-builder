@@ -1,0 +1,145 @@
+.btn {
+	///////////////////////////////////////
+	$btn-padding: 10px 20px;
+	$btn-padding-lg: 15px 30px;
+	$btn-padding-sm: 5px 10px;
+
+	$btn-font: bold 14px $g-font-second;
+	$btn-font-lg: bold 16px $g-font-second;
+	$btn-font-sm: bold 12px $g-font-second;
+	///////////////////////////////////////
+
+	@extend %btn-reset;
+
+	padding: $btn-padding;
+	height: 40px;
+	line-height: 40px;
+
+	background: $color-blue;
+	border-radius: 4px;
+
+	color: $color-white;
+	font: $btn-font;
+	text-shadow: 0 0 1px rgba(#000, 0.1);
+
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	transition: background 0.3s;
+
+	&:hover {
+		background: $color-green;
+	}
+
+	.btn__icon {
+		display: inline-block;
+
+		.svg-icon {
+			height: 16px;
+			width: 18px;
+			fill: $color-white;
+			margin-right: 4px;
+		}
+	}
+
+	.btn__preloader {
+		display: none;
+		width: 16px;
+		height: 16px;
+		margin-right: 4px;
+
+		border-radius: 50%;
+		background: #ffffff;
+		background: linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+		position: relative;
+		animation: preloader 1.4s infinite linear;
+		transform: translateZ(0);
+		vertical-align: middle;
+
+		&:before {
+			width: 50%;
+			height: 50%;
+			background: #ffffff;
+			border-radius: 100% 0 0 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			content: '';
+		}
+
+		&:after {
+			width: 75%;
+			height: 75%;
+			border-radius: 50%;
+			content: '';
+			margin: auto;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+		}
+
+		@keyframes preloader {
+			0% {
+				-webkit-transform: rotate(0deg);
+				transform: rotate(0deg);
+			}
+			100% {
+				-webkit-transform: rotate(360deg);
+				transform: rotate(360deg);
+			}
+		}
+	}
+
+	// modifiers
+	&.btn_show-preloader {
+
+		.btn__icon {
+			display: none;
+		}
+
+		.btn__preloader {
+			display: inline-block;
+		}
+	}
+
+	&.btn_green {
+		background-color: $color-green;
+
+		&:hover {
+			background: darken($color-green, 10);
+		}
+	}
+
+	&.btn_lg {
+		padding: $btn-padding-lg;
+
+		font: $btn-font-lg;
+	}
+
+	&.btn_sm {
+		padding: $btn-padding-sm;
+
+		font: $btn-font-sm;
+	}
+
+	&.btn_fix {
+		width: 180px;
+		padding-left: 2px;
+		padding-right: 2px;
+
+		&.btn_lg {
+			width: 200px;
+		}
+
+		&.btn_sm {
+			width: 140px;
+		}
+	}
+
+	&.btn_block {
+		display: block;
+		width: 100%;
+	}
+}

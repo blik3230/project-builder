@@ -1,0 +1,31 @@
+ol {
+	width: 200px;
+}
+
+li + li {
+	margin-top: 4px;
+}
+
+a {
+	color: black;
+}
+
+.fin a {
+	color: green;
+}
+
+.active {
+	color: red !important;
+}
+
+.iframe {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: calc(100vw - 220px);
+}
+
+iframe {
+	width: 100%;
+	height: 900px;
+}

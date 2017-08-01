@@ -1,0 +1,40 @@
+//-
+	Created by ITUA on 14.06.2017.
+
+form.form.form_recovery.form_show-message---
+	.form__body
+		.form__item
+			.form__wrap-label
+				label.form__label Введіть Ваш email*
+			.form__wrap-field
+				input.form__field.input(
+				type='text',
+				name='login',
+				class='js-validate',
+				data-type-of-validate='email',
+				required,
+				placeholder='youremail@mail.com')
+
+		.form__item
+			button.form__submit.btn.btn_block(type='submit')
+				.btn__icon
+					+svg_sent-password
+				.btn__preloader
+				= ' Відправити пароль'
+
+	.form__message
+		.form__text-success.
+			Контрольний рядок, а також ваші
+			реєстраційні дані були вислані
+			по E-Mail. Будь ласка, дочекайтеся листи,
+			так як контрольна рядок змінюється
+			при кожному запиті.
+		a.form__btn-close-message.btn.btn_green.btn_block
+			.btn__icon
+				+svg_ok
+			| ОК
+	.form__footer
+		.form__link.reg-switcher__btn-login
+			i.icon.icon_recovery-back
+			=' Повернутись до авторизації'
+	include ../form__server-err/form__server-err

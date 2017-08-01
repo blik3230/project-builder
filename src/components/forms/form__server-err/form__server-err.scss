@@ -1,0 +1,21 @@
+.server-err {
+	display: none;
+	justify-content: space-between;
+	align-items: center;
+
+	.server-err__icon {
+		margin-right: 10px;
+	}
+
+	.server-err__text {
+		margin-top: -3px;
+		color: $color-red;
+		font: 12px $g-font-second;
+		flex: 1;
+	}
+
+	// modifiers
+	&.server-err_show {
+		display: flex;
+	}
+}

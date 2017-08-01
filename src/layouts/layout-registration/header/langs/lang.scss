@@ -1,0 +1,19 @@
+.lang {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 56px;
+
+	.lang__text {
+		padding-top: 4px;
+
+		color: $color-white;
+		font: 12px/1 $g-font-second;
+		text-transform: uppercase;
+		vertical-align: bottom;
+	}
+
+	.lang__icon {
+
+	}
+}

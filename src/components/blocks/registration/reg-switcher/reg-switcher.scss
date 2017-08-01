@@ -1,0 +1,38 @@
+.reg-switcher {
+
+	.reg-switcher__title {
+		padding: 16px 0 22px 0;
+		border-top: 4px solid #58aaf7;
+
+		color: $color-gray;
+		font: $g-fw-bold 14px $g-font-second;
+		text-align: center;
+	}
+
+	.reg-switcher__tabs {
+
+	}
+
+	.reg-switcher__recovery {
+		display: none;
+	}
+
+	.reg-switcher__btn-login {
+
+		.icon {
+			margin-right: 5px;
+		}
+	}
+
+	// modifiers
+	&_show-recovery {
+
+		.reg-switcher__tabs {
+			display: none;
+		}
+
+		.reg-switcher__recovery {
+			display: block;
+		}
+	}
+}

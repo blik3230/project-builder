@@ -1,0 +1,49 @@
+//-
+	Created by ITUA on 16.06.2017.
+
+form.form.form_change-pass.form_show-message---
+	.form__head
+		.form__title Іванов Іван Іванович
+		.form__caption ivan@really-sobaka.com
+
+	.form__body
+		.form__item
+			.form__wrap-label
+				label.form__label Новий пароль*
+			.form__wrap-field
+				input.form__field.input(type='password',
+				name='pass',
+				class='js-validate',
+				data-type-of-validate='pass',
+				placeholder="******",
+				required)
+
+
+		.form__item
+			.form__wrap-label
+				label.form__label Повторіть пароль*
+			.form__wrap-field
+				input.form__field.input(type='password',
+				class='js-validate',
+				placeholder="******",
+				data-type-of-validate='confpass',
+				required)
+
+		.form__item
+			button.form__submit.btn.btn_block.btn_load(type='submit')
+				.btn__icon
+					+svg_refresh
+				.btn__preloader
+				= ' Замінити пароль'
+
+	.form__message
+		.form__text-success Ваш пароль успішно змінений!
+		a.form__btn-close-message.btn.btn_green.btn_block
+			.btn__icon
+				+svg_ok
+			| ОК
+
+	.form__footer
+		.form__link.reg-switcher__btn-login
+			i.icon.icon_recovery-back
+			=' Повернутись до авторизації'

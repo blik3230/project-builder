@@ -1,0 +1,46 @@
+.tabs.tabs_reg-switcher {
+
+	.tabs__nav {
+		display: flex;
+		margin-bottom: 14px;
+		user-select: none;
+	}
+
+	.tabs__nav-item {
+		width: 50%;
+		padding: 16px 0 14px 0;
+		border-top: 4px solid transparent;
+
+		color: #b5b5b5;
+		text-align: center;
+
+		cursor: pointer;
+
+		transition: all 0.2s;
+		
+		// modifiers
+		&:hover:not(.tabs__nav-item_active) {
+			color: $color-blue;
+		}
+		
+		&_active {
+			border-top-color: #58aaf7;
+			color: #6c6e80;
+			font-weight: bold;
+		}
+	}
+
+
+
+	.tabs__container {
+
+	}
+
+	.tabs__item {
+
+		// modifiers
+		&_active {
+
+		}
+	}
+}

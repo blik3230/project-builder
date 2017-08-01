@@ -1,0 +1,26 @@
+// стили для основного шаблона
+
+
+// base style (variables of the project, reset, normalize, fonts, typography)
+@import "../../common/index";
+
+// utils (mixins, function, templates, helpers - individual library)
+@import "../../utils/scss/index";
+
+// susy grid
+//@import "susy";
+
+// vendors
+@import "../../vendors/_tools";
+
+// layouts (styles for layouts)
+@import "../../layouts/index";
+
+// icon svg-symbol
+@import "../../common/svg-sprite";
+
+// components (styles for components)
+@import "../../components/index";
+
+// pages (styles for modifiers of pages)
+@import "../../pages/index";

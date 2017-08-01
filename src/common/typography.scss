@@ -1,0 +1,133 @@
+$color-text: $color-black;
+$color-link: $color-blue;
+
+$color-content-link: $color-link;
+$color-content-table-bd: #cccaca;
+$color-content-table-bg: #e6e4e4;
+
+body {
+	color: $color-text;
+	font: 14px/1.4 $g-font-main;
+}
+
+a {
+	color: $color-link;
+	// todo: use function color
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	margin-bottom: 20px;
+}
+
+h1,
+.h1 {
+	font-size: 25px;
+}
+
+h2,
+.h2 {
+	font-size: 22px;
+}
+
+h3,
+.h3 {
+	margin-bottom: 20px;
+	font-size: 18px;
+}
+
+h4,
+.h4 {
+	font-size: 17px;
+}
+
+h5,
+.h5 {
+	font-size: 16px;
+}
+
+h6,
+.h6 {
+	font-size: 15px;
+}
+
+
+.title {
+	font-size: 25px;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+.content {
+
+	* + * {
+		margin-top: 10px;
+	}
+
+	a {
+		color: $color-content-link;
+		text-decoration: none;
+		border-bottom: 1px dashed $color-content-link;
+
+		&:hover {
+			border-bottom-color: transparent;
+		}
+	}
+
+	ul, ul li {
+		list-style-type: square;
+		list-style-position: inside;
+	}
+
+	ol, ol li {
+		list-style-type: decimal;
+		list-style-position: inside;
+	}
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		border-spacing: 0;
+
+		th {
+			font-weight: bold;
+		}
+
+		td {
+			padding: 14px 15px;
+			border-top: 1px solid $color-content-table-bd;
+			border-bottom: 1px solid $color-content-table-bd;
+		}
+
+		&.zebra {
+
+			tr:nth-child(even) {
+				background-color: $color-content-table-bg;
+			}
+
+			td {
+				border: 1px solid $color-content-table-bd;
+			}
+		}
+	}
+
+	img {
+		max-width: 100%;
+	}
+
+}

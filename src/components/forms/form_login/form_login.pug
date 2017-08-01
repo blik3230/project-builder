@@ -1,0 +1,36 @@
+//-
+	Created by ITUA on 14.06.2017.
+
+form.form.form_login(action='/local/ajax/login/')
+	.form__body
+		.form__item
+			.form__wrap-label
+				label.form__label Введіть Ваш email / телефон*
+			.form__wrap-field
+				input.form__field.input(type='text',
+				class='js-validate',
+				name='FORM[LOGIN]',
+				data-type-of-validate="phonemail",
+				required)
+
+		.form__item
+			.form__wrap-label
+				label.form__label Введіть пароль
+			.form__wrap-field
+				input.form__field.input(type='password',
+				class='js-validate',
+				name='FORM[PASSWORD]',
+				required,
+				data-type-of-validate="pass",
+				placeholder='******')
+
+		.form__item
+			button.form__submit.btn.btn_block.btn_load(type='submit')
+				.btn__icon
+					+svg_login
+				.btn__preloader
+				= ' Авторизуватись'
+	.form__footer
+		.form__link.reg-switcher__btn-recovery Відновлення паролю
+	include ../form__server-err/form__server-err
+

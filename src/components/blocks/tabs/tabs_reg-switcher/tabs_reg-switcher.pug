@@ -1,0 +1,14 @@
+//-
+	Created by ITUA on 14.06.2017.
+
+.tabs.tabs_reg-switcher
+	.tabs__nav
+		.tabs__nav-item(data-target='login',
+		class="tabs__nav-item_active") Авторизація
+		.tabs__nav-item(data-target='registration') Реєстрація
+	.tabs__container
+		.tabs__item(data-tab='login', class='tabs__item_active')
+			include ../../../forms/form_login/form_login
+
+		.tabs__item(data-tab='registration')
+			include ../../../forms/form_registration/form_registration

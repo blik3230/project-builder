@@ -1,0 +1,62 @@
+.page-registration {
+
+	.page-registration__container {
+		@extend %clfx;
+		position: relative;
+	}
+
+	.page-registration__img {
+		position: absolute;
+		top: 0;
+		left: -595px;
+		
+		width: 796px;
+		height: 599px;
+
+		background: url('../images/bg/page-registration-bg.png');
+
+		@include media-sm {
+			display: none;
+		}
+	}
+
+	.page-registration__info {
+		float: left;
+		width: 480px;
+
+		margin-left: 200px;
+
+		@include media-sm {
+			width: 368px;
+			margin-left: 0;
+		}
+
+		@include media-xs {
+			float: none;
+			width: 100%;
+		}
+	}
+
+	.page-registration__forms {
+		float: right;
+		width: 380px;
+
+		background-color: #fff;
+		border-radius: 4px;
+
+		box-shadow: 0 1px 40px  rgba(0, 0, 0, 0.21);
+
+		overflow: hidden;
+
+		@include media-sm {
+			width: 340px;
+			margin-right: 10px;
+		}
+
+		@include media-xs {
+			float: none;
+			width: 300px;
+			margin: 0 auto;
+		}
+	}
+}

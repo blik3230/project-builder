@@ -1,0 +1,7 @@
+.grid {
+	@include make-grid(12, 10px);
+}
+
+.grid-24 {
+	@include make-grid(24, 10px);
+}

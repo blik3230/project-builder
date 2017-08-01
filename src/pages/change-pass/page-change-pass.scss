@@ -1,0 +1,17 @@
+.page-change-pass {
+
+	.page-change-pass__title {
+		margin-bottom: 40px;
+	}
+
+	.page-change-pass__content {
+		max-width: 380px;
+		padding: 16px 0;
+		margin: 0 auto;
+
+		background-color: $color-white;
+		border-top: 4px solid #58aaf7;
+		border-radius: 4px;
+		box-shadow: 0 1px 40px rgba(0, 0, 0, 0.21);
+	}
+}

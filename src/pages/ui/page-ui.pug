@@ -1,0 +1,34 @@
+//-
+	Created by Владыка Макс on 09.02.2017.
+
+extends ../../layouts/layout-main/layout-main
+
+block title
+	title Главная страница
+
+block content
+	main.main.page-home
+		.container
+			.grid
+				.grid__col-12
+					include ../../components/blocks/panel/example
+				.grid__col-6
+					.panel
+						.panel__header
+							.panel__title Кнопки1
+
+						.panel__content
+							p
+								include ../../components/btns/example
+
+						.panel__footer
+
+				.grid__col-6
+					.panel.panel_blue
+						.panel__header
+							.panel__title Кнопки
+
+						.panel__content
+							include ../../components/btns/example
+
+						.panel__footer

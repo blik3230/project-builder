@@ -1,0 +1,23 @@
+//-
+	Created by Владыка Макс on 09.02.2017.
+
+-
+	var items = [
+	{
+		title: 'UI',
+		href: 'page-ui.html'
+	},{
+		title: 'Главная',
+		href: 'page-home.html'
+	},{
+		title: 'Контакты',
+		href: 'page-home.html'
+	}
+	];
+
+ul.nav-main
+	each item in items
+		li.nav-main__item
+			a.nav-main__link(href=item.href)=item.title
+
+

@@ -1,0 +1,35 @@
+.footer {
+	padding: 20px 0;
+
+	.footer__layout {
+		display: flex;
+
+		justify-content: space-between;
+		align-items: center;
+
+		@include media-xs {
+			max-width: 500px;
+		}
+	}
+
+	.footer__copy {
+		margin-left: 580px;
+
+		color: $color-white;
+		font: 13px $g-font-second;
+
+		opacity: 0.6;
+
+		@include media-sm {
+			margin-left: 267px;
+		}
+
+		@include media-xs {
+			margin-left: 0;
+		}
+	}
+
+	.footer__made {
+
+	}
+}

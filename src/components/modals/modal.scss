@@ -1,0 +1,42 @@
+// main styles for modal in src/vendors/Magnific-popup/main.scss
+.modal {
+	position: relative;
+	width: auto;
+	max-width: 480px;
+	margin: 20px auto;
+	padding: 40px 80px;
+
+	background-color: #fff;
+	border-radius: 6px;
+
+	@include media-xs {
+		max-width: 300px;
+		padding: 20px;
+	}
+
+	.mfp-align-top & {
+		margin: 50px auto 20px;
+	}
+
+	&__close {
+		position: absolute;
+		right: -21px;
+		top: -21px;
+
+		//@include bg($modal-close);
+
+		cursor: pointer;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	&__title {
+
+	}
+
+	&__icon {
+
+	}
+}

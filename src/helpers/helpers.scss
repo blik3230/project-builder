@@ -1,0 +1,33 @@
+// text-align
+.h-tac {
+	text-align: center!important;
+}
+
+.h-tar {
+	text-align: right;
+}
+
+// display
+.h-df {
+	display: flex;
+
+	&_aic {
+		align-items: center;
+	}
+
+	&_jcsb {
+		justify-content: space-between;
+	}
+}
+
+// background - usually for sections
+.h-bg-gray {
+
+	background-color: #f6f6f6;
+}
+
+
+// clearfix
+.clfx {
+	@extend %clfx;
+}

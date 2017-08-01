@@ -1,0 +1,36 @@
+.modal.modal_reg-success {
+
+	text-align: center;
+
+	.modal__icon {
+		margin-bottom: 26px;
+
+		@include media-xs {
+			margin-bottom: 13px;
+		}
+
+		.svg-icon {
+			width: 70px;
+			height: 70px;
+			fill: #b9bfc8;
+		}
+	}
+
+	.modal__title {
+		margin-bottom: 7px;
+
+		color: #4fb36d;
+		font: $g-fw-bold 24px $g-font-second;
+	}
+
+	.modal__desc {
+		margin-bottom: 34px;
+
+		font: 12px/19px $g-font-second;
+		color: #4d5156;
+
+		@include media-xs {
+			margin-bottom: 17px;
+		}
+	}
+}

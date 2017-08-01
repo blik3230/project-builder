@@ -1,0 +1,20 @@
+.icon {
+	display: inline-block;
+	vertical-align: middle;
+
+	&.icon_flag-ua {
+		@include bg($flag-ua);
+	}
+
+	&.icon_flag-rus {
+		@include bg($flag-rus);
+	}
+
+	&.icon_recovery-back {
+		@include bg($recovery-back);
+	}
+
+	&.icon_server-err {
+		@include bg($server-err);
+	}
+}

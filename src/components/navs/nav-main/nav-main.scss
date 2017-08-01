@@ -1,0 +1,27 @@
+$nav-main-color: darken(#fff, 8);
+$nav-main-shadow: 1px 2px 4px rgba(#000, 0.1);
+
+.nav-main {
+	@extend %nav-reset;
+
+	display: flex;
+
+	.nav-main__item {
+
+		& + .nav-main__item {
+			margin-left: 12px;
+		}
+	}
+
+	.nav-main__link {
+		@include style-link-1($nav-main-color);
+
+		font: 20px $g-font-second;
+		text-transform: uppercase;
+		text-shadow: $nav-main-shadow;
+
+		&:after {
+			box-shadow: $nav-main-shadow;
+		}
+	}
+}
