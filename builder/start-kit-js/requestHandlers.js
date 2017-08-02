@@ -22,9 +22,12 @@ exports.writeConfig = function (req, res) {
 };
 
 exports.addPage = function (req, res) {
-	const pageName = req.body['page_name'];
+	const newPage = {
+		pageName: req.body['page_name'],
+		htmlName: req.body['page_html']
+	};
 
-	projectAPI.addPage(pageName, (err, result) => {
+	projectAPI.addPage(newPage, (err, result) => {
 		if(err) {
 			res.send(err);
 		} else {

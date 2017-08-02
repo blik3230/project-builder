@@ -65,7 +65,8 @@ function updateConfig(callback) {
 
 }
 
-function addPage(pageName, callback) {
+function addPage(newPage, callback) {
+	const pageName = newPage.pageName;
 	const dirPath = path.join(pagesDirPath, pageName);
 	fs.stat(dirPath, (err, stat) => {
 		if(!err) {
@@ -82,7 +83,27 @@ function addPage(pageName, callback) {
 						callback(err);
 					}
 
-					callback(null, result);
+					readConfigFile((err, config) => {
+						if(err) {
+							console.log('ошибка при создании стриници, не могу прочитать конфиг')
+							callback('ошибка при создании стриници, не могу прочитать конфиг');
+							return;
+						}
+
+						config.push({
+							html: newPage.htmlName + '.html',
+							name: newPage.pageName,
+							path: dirPath + newPage.pageName + '.pug'
+						});
+
+						writeConfig(config, r => {
+							callback(null, {
+								result: result,
+								pages: r
+							});
+						})
+					});
+
 				});
 			});
 
@@ -178,7 +199,7 @@ function gatherConfig(dirPath, callback) {
 						const name = path.basename(filePath, '.pug');
 
 						filePaths.push({
-							html: name + 'html',
+							html: name + '.html',
 							name: name,
 							path: filePath
 						});

@@ -9,24 +9,41 @@ html(lang='ru')
 			title Project Name
 		style
 			include style-for-index.css
+		script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js')
 
-	body
+
+	body(ng-app='builder', ng-controller="PageListController as pageList")
 		.iframe
-			iframe(src="" frameborder="0" id="iframe")
+			iframe(ng-src="{{pageList.currentPage}}" frameborder="0" id="iframe")
 
 		block content
-			ol.list-pages
-				li.list-pages__item
-					a.link(href="home.html") Главная
-				li.list-pages__item
-					a.link(href="home.html") Главная
-				li.list-pages__item
-					a.link(href="home.html") Главная
-			button(onclick="addPage()") Добавить новую страницу.
+			page-list
+			button(ng-click="pageList.showFormAddPage = true") Добавить новую страницу.
 
+		.modal(ng-if="pageList.showFormAddPage", ng-click="pageList.showFormAddPage = false")
+			.modal__inner(ng-click="$event.stopPropagation()")
+				.modal__header
+					.modal__title Добавление новой страницы
+				form.form(autocomplete="off")
+					.form__row
+						.form__col-1
+							label.form__label Имя pug
+						.form__col-2
+							.form__field
+								input.form__inp(name="page_name", placeholder='page-home', ng-model="pageList.newPage.pugName")
+					.form__row
+						.form__col-1
+							label.form__label Имя html
+						.form__col-2
+							.form__field
+								input.form__inp(name="page_html", placeholder='Главная страница', ng-model="pageList.newPage.htmlName", value="{{pageList.newPage.pugName}}")
+					.form__row
+						.form__col-2
+							button.form__submit.btn(ng-click="pageList.addNewPage()") Добавить страницу
 
 		script
-			include script-for-index.js
+			//- include script-for-index.js
+			include app.js
 
 
 
